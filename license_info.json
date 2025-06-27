@@ -1,0 +1,15 @@
+{
+    "customer_name": "Unknown",
+    "username": "johnd123",
+    "product_name": "VulnScan",
+    "product_id": "OSPL-BYTU5JD",
+    "license_key": "OSPL-VulnScan-20250626-134123-BYTU5JD",
+    "license_type": "Subscription \u2013 Monthly",
+    "status": "Active",
+    "start_date": "2025-06-26",
+    "expiry_date": "2025-07-26",
+    "email": "octopyder@example.com",
+    "license_server_check": "Successful (Last checked: 2025-06-25)",
+    "timestamp": "2025-06-26T08:11:23.683254Z",
+    "signature": "N992XYN3VHTFFCF0ARRTEPCLWFJUSK9F"
+}
