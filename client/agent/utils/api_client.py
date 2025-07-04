@@ -25,6 +25,11 @@ class LicenseAPIClient:
             'User-Agent': 'ZAYONA-License-Agent/1.0.0'
         })
     
+    def set_base_url(self, url: str):
+        """Set the base URL for API requests"""
+        self.base_url = url
+        logger.info(f"API base URL set to: {url}")
+    
     def _make_request(self, method: str, endpoint: str, data: Dict = None) -> Dict[str, Any]:
         """Make HTTP request to API"""
         url = f"{self.base_url}{endpoint}"
