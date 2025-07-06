@@ -115,8 +115,8 @@ class LicenseAgentCLI:
             
             print(f"\n{Fore.YELLOW}🔄 Generating hardware fingerprint...{Style.RESET_ALL}")
             try:
-            hw_fingerprint = self.hardware_fingerprint.generate_fingerprint()
-            print(f"{Fore.GREEN}✅ Hardware fingerprint generated{Style.RESET_ALL}")
+                hw_fingerprint = self.hardware_fingerprint.generate_fingerprint()
+                print(f"{Fore.GREEN}✅ Hardware fingerprint generated{Style.RESET_ALL}")
             except Exception as e:
                 print(f"{Fore.YELLOW}⚠️  Warning: Could not get full hardware fingerprint: {e}{Style.RESET_ALL}")
                 hw_fingerprint = "UNKNOWN"
@@ -180,7 +180,7 @@ class LicenseAgentCLI:
             
             print(f"{Fore.YELLOW}🔄 Generating hardware fingerprint...{Style.RESET_ALL}")
             try:
-            hw_fingerprint = self.hardware_fingerprint.generate_fingerprint()
+                hw_fingerprint = self.hardware_fingerprint.generate_fingerprint()
                 print(f"{Fore.GREEN}✅ Hardware fingerprint generated{Style.RESET_ALL}")
             except Exception as e:
                 print(f"{Fore.YELLOW}⚠️  Warning: Could not get full hardware fingerprint: {e}{Style.RESET_ALL}")
@@ -249,20 +249,20 @@ class LicenseAgentCLI:
     def test_api_connection(self, silent=False):
         """Test connection to API server"""
         if not silent:
-        print(f"\n{Fore.CYAN}🔗 API CONNECTION TEST{Style.RESET_ALL}")
+            print(f"\n{Fore.CYAN}🔗 API CONNECTION TEST{Style.RESET_ALL}")
             print(f"{Fore.YELLOW}🔄 Testing connection to: {self.api_url}{Style.RESET_ALL}")
         try:
             if self.api_client.test_connection():
                 if not silent:
-                print(f"{Fore.GREEN}✅ API connection successful!{Style.RESET_ALL}")
+                    print(f"{Fore.GREEN}✅ API connection successful!{Style.RESET_ALL}")
                 return True
             else:
                 if not silent:
-                print(f"{Fore.RED}❌ API connection failed{Style.RESET_ALL}")
+                    print(f"{Fore.RED}❌ API connection failed{Style.RESET_ALL}")
                 return False
         except Exception as e:
             if not silent:
-            print(f"{Fore.RED}❌ API connection test failed: {e}{Style.RESET_ALL}")
+                print(f"{Fore.RED}❌ API connection test failed: {e}{Style.RESET_ALL}")
             logger.error(f"API connection test error: {e}")
             return False
     
@@ -272,9 +272,9 @@ class LicenseAgentCLI:
         try:
             print(f"{Fore.YELLOW}🔄 Generating hardware fingerprint...{Style.RESET_ALL}")
             try:
-            fingerprint = self.hardware_fingerprint.generate_fingerprint()
-            print(f"{Fore.GREEN}✅ Hardware fingerprint generated{Style.RESET_ALL}")
-            print(f"{Fore.WHITE}Fingerprint: {Fore.CYAN}{fingerprint}{Style.RESET_ALL}")
+                fingerprint = self.hardware_fingerprint.generate_fingerprint()
+                print(f"{Fore.GREEN}✅ Hardware fingerprint generated{Style.RESET_ALL}")
+                print(f"{Fore.WHITE}Fingerprint: {Fore.CYAN}{fingerprint}{Style.RESET_ALL}")
             except Exception as e:
                 print(f"{Fore.YELLOW}⚠️  Warning: Could not get full hardware fingerprint: {e}{Style.RESET_ALL}")
         except Exception as e:
